@@ -15,7 +15,7 @@ function App() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          VAMOS A CODEAR COMO LOCOS! :D
+          TODA
         </a>
       </header>
     </div>
