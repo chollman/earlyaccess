@@ -11,7 +11,6 @@ function App() {
           <Route index element={<Home />} />
           <Route path='contacto' element={<Contact />} />
         </Route>
-
         <Route path='testing' element={<Home />} />
       </Routes>
     </BrowserRouter>
