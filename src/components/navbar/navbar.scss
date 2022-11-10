@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.#{$css-namespace} {
+  .navbar {
+    background-color: $primary-color;
+    display: flex;
+    color: $font-color;
+    height: 100px;
+    padding: 20px;
+    box-shadow: 0px 1px 15px $secondary-color;
+    & ul {
+      display: flex;
+      list-style: none;
+      color: $font-color;
+      text-decoration: none;
+      gap: 20px;
+      :hover {
+        color: $secondary-color;
+      }
+      & li  a{
+        color: $font-color;
+      }
+    }
+  }
+}
