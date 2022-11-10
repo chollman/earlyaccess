@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import ArticlesList from './components/ArticlesList'
 
@@ -12,7 +11,5 @@ const Home = (props) => {
     </div>
   )
 }
-
-Home.propTypes = {}
 
 export default Home
