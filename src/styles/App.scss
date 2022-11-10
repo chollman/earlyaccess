@@ -1,1 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
+@import './variables.scss';
+
+.#{$css-namespace} {
+  //CSS GENERAL
+}

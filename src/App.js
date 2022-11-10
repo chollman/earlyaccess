@@ -3,7 +3,7 @@ import SharedLayout from './components/SharedLayout'
 import Contact from './pages/contact'
 import Home from './pages/home'
 
-import './styles/App.scss'
+import './styles/app.scss'
 
 function App() {
   return (
