@@ -1,6 +1,5 @@
 export const data = {
-  status: 'ok',
-  totalResults: 10145,
+  totalResults: 13,
   articles: [
     {
       source: {

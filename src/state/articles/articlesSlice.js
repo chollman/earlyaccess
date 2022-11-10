@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { data } from '../../data'
 
 const initialState = {
-  articles: [],
-  amount: 0,
-  isLoading: true,
+  data: data.articles,
+  amount: data.totalResults,
+  isLoading: false,
   isError: false,
 }
 
