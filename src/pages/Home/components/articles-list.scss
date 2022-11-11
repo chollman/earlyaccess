@@ -1,0 +1,21 @@
+@import '../../../styles/variables.scss';
+
+.#{$css-namespace} {
+  .article-wrapper {
+    transition: all ease 200ms;
+    &:hover {
+      transform: scale(1.025);
+    }
+    .article {
+      background-color: $bg-primary;
+      padding: 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      @include border-radius(10px);
+      .article-image {
+        @include border-radius(4px);
+        margin: 10px 0;
+      }
+    }
+  }
+}

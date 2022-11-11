@@ -1,19 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
+
+import './articles-list.scss'
 
 const ArticlesList = ({ articles }) => {
   return (
-    <div>
-      {articles.map(({ url, title, urlToImage, description }) => {
-        return (
-          <div key={url}>
-            <h4>{title}</h4>
-            <img src={urlToImage} alt={title} height='300' width='450' />
-            <p>{description}</p>
-          </div>
-        )
-      })}
-    </div>
+    <Container>
+      <Row>
+        {articles.map(({ url, title, urlToImage, description }) => {
+          return (
+            <Col className='article-wrapper' key={url} md={4}>
+              <div className='article'>
+                <h4>{title}</h4>
+                <Image
+                  className='article-image'
+                  fluid
+                  src={urlToImage}
+                  alt={title}
+                />
+                <p>{description}</p>
+              </div>
+            </Col>
+          )
+        })}
+      </Row>
+    </Container>
   )
 }
 
