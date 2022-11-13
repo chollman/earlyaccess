@@ -9,7 +9,7 @@ import './articles-list.scss'
 
 const ArticlesList = ({ articles }) => {
   return (
-    <Container>
+    <Container className='articles-list'>
       <Row>
         {articles.map(({ url, title, urlToImage, description }) => {
           return (
