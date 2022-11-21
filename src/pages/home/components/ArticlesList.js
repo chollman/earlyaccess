@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import { Link } from 'react-router-dom'
 
 import './articles-list.scss'
 
@@ -11,19 +12,27 @@ const ArticlesList = ({ articles }) => {
   return (
     <Container className='articles-list'>
       <Row>
-        {articles.map(({ url, title, urlToImage, description }) => {
+        {articles.map(({ id, title, urlToImage, description }) => {
           return (
-            <Col className='article-wrapper' key={url} md={4}>
-              <div className='article'>
-                <h4>{title}</h4>
-                <Image
-                  className='article-image'
-                  fluid
-                  src={urlToImage}
-                  alt={title}
-                />
-                <p>{description}</p>
-              </div>
+            <Col className='article-wrapper' key={id} xs={12} md={6} lg={4}>
+              <Link className='link' to={`/articulo/${id}`}>
+                <div className='article'>
+                  <h4>{title}</h4>
+                  <div className='image-container'>
+                    <Image
+                      className='article-image'
+                      fluid
+                      src={urlToImage}
+                      alt={title}
+                    />
+                  </div>
+                  <p>
+                    {' '}
+                    {`${description.substring(0, 100)}...`}{' '}
+                    <span>Leer mas</span>
+                  </p>
+                </div>
+              </Link>
             </Col>
           )
         })}

@@ -2,6 +2,7 @@ export const data = {
   totalResults: 13,
   articles: [
     {
+      id: 1,
       source: {
         id: null,
         name: 'Theregister.com',
@@ -17,6 +18,7 @@ export const data = {
         'The Twitter "Official" label that showed up on the platform yesterday as a way to fix an arguably unbroken verification system has apparently disappeared from many accounts in less than 24 hours.\r\nPl… [+3971 chars]',
     },
     {
+      id: 2,
       source: {
         id: 'associated-press',
         name: 'Associated Press',
@@ -33,6 +35,7 @@ export const data = {
         'Driving range is one of the most important factors for most shoppers in the market for an electric vehicle. The term range anxiety has been synonymous with EVs for most of their existence, but that s… [+4539 chars]',
     },
     {
+      id: 3,
       source: {
         id: null,
         name: 'CleanTechnica',
@@ -49,6 +52,7 @@ export const data = {
         'As the price tags on electric vehicles remain out of reach for many consumers, some have elected to buy used Teslas to save money. The price of a used Tesla can vary significantly, depending on which… [+3924 chars]',
     },
     {
+      id: 4,
       source: {
         id: null,
         name: 'Biztoc.com',
@@ -65,6 +69,7 @@ export const data = {
         "Tesla shares slid to their lowest level in nearly two years on Wednesday. Chief Executive Elon Musk disclosed he sold another $3.95 billion worth of shares. Musk's latest share sale fueled jitters ab… [+1339 chars]",
     },
     {
+      id: 5,
       source: {
         id: null,
         name: 'Seeking Alpha',
@@ -81,6 +86,7 @@ export const data = {
         'Ethan Miller\r\nIn a rather surprising move, Ouster (OUST) agreed to a deal with Velodyne Lidar (NASDAQ:VLDR) in a merger of equals. The Lidar sensor space offers substantial potential with the biggest… [+7160 chars]',
     },
     {
+      id: 6,
       source: {
         id: null,
         name: 'Seeking Alpha',
@@ -97,6 +103,7 @@ export const data = {
         'Rivian Automotive, Inc. (NASDAQ:RIVN) Q3 2022 Earnings Conference Call November 9, 2022 5:00 PM ET\r\n Company Participants\r\n Tim Bei - VP, IR and Strategic Finance\r\n RJ Scaringe - Founder, Chairman an… [+49661 chars]',
     },
     {
+      id: 7,
       source: {
         id: null,
         name: 'Moneycontrol',
@@ -113,6 +120,7 @@ export const data = {
         'Wall Street ended sharply lower on Wednesday as Republican gains in midterm elections appeared more modest than some expected, with investors also focusing on upcoming inflation data that will provid… [+3151 chars]',
     },
     {
+      id: 8,
       source: {
         id: null,
         name: 'Dansdeals.com',
@@ -130,6 +138,7 @@ export const data = {
         'Some stories and deals dont get their own post, but should get some coverage. Here are some quick takes on stories that caught my eye. Lets hear your thoughts about them in the comments below!\r\nView … [+23587 chars]',
     },
     {
+      id: 9,
       source: {
         id: null,
         name: 'The Guardian',
@@ -147,6 +156,7 @@ export const data = {
         'Joe Biden thinks Twitter boss Elon Musks relationships with other countries is worthy of being looked at.\r\nBiden was asked at a news conference on Wednesday whether he thought Musk was a threat to na… [+2541 chars]',
     },
     {
+      id: 10,
       source: {
         id: null,
         name: 'The Daily Hodl',
@@ -164,6 +174,7 @@ export const data = {
         'A popular crypto analyst says the best altcoins to accumulate right now include Solana (SOL), Polygon (MATIC) and five Ethereum (ETH) rivals.\r\nIn a new strategy video, the host of InvestAnswers says … [+2350 chars]',
     },
     {
+      id: 11,
       source: {
         id: null,
         name: 'The Straits Times',
@@ -180,6 +191,7 @@ export const data = {
         'WASHINGTON President Joe Biden said Mr Elon Musks relationships with other countries are worthy of being looked at, though he declined to say whether the worlds richest man was doing anything inappro… [+1654 chars]',
     },
     {
+      id: 12,
       source: {
         id: null,
         name: 'LADbible',
@@ -197,6 +209,7 @@ export const data = {
         "Elon Musk has been honoured in what could possibly be the strangest way ever.\r\nThe world's richest man has been hailed as the GOAT, which usually stands for the Greatest Of All Time, by a group of fa… [+2163 chars]",
     },
     {
+      id: 13,
       source: {
         id: null,
         name: 'Biztoc.com',
