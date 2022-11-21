@@ -1,17 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 //import PropTypes from 'prop-types'
 import './navbar.scss'
 import { socialMedia } from '../../utils/social-media'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { BsSearch } from 'react-icons/bs'
-import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
-import { Navbar, NavbarBrand } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 
-import NavDropdown from 'react-bootstrap/NavDropdown'
-
-const Naavbar = (props) => {
-  const [styledLink, setStyledLink] = useState(false)
+const Naavbar = () => {
   return (
     <Navbar collapseOnSelect expand='lg'>
       <Navbar.Toggle className='cambiame'>
@@ -35,7 +31,7 @@ const Naavbar = (props) => {
             </NavLink>
             <NavLink
               to='/contacto'
-              className={({ isActive }) => (isActive ? 'active': 'link')}
+              className={({ isActive }) => (isActive ? 'active' : 'link')}
             >
               Nosotros
             </NavLink>
@@ -56,9 +52,5 @@ const Naavbar = (props) => {
     </Navbar>
   )
 }
-//let colors = ['#ff0000', '#00ff00', '#0000ff']
-//let random_color = colors[Math.floor(Math.random() * colors.length)]
-//document.getElementById('social-icon').style.color = random_color
-//Navbar.propTypes = {}
 
 export default Naavbar

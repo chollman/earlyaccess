@@ -1,0 +1,12 @@
+@import '../../../styles/variables.scss';
+
+.#{$css-namespace} {
+ .contenedor{
+  background-color: blue;
+  height: 100px;
+ }
+ .prev-icon{
+  color: red;
+ }
+}
+
