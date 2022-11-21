@@ -24,3 +24,15 @@
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
 }
+@mixin link-class() {
+  display: flex;
+  position: relative;
+  color: $font-color;
+  text-decoration: none;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border-bottom: 3px solid transparent;
+  width: auto;
+}

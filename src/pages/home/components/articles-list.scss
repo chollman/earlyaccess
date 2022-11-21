@@ -3,6 +3,7 @@
 .#{$css-namespace} {
   .articles-list {
     .article-wrapper {
+      padding-top: 15px;
       .link {
         text-decoration: none;
         .article {
@@ -29,7 +30,7 @@
             }
           }
           &:hover {
-            transform: rotateZ(-1deg);
+            transform:translateY(-5px);
             box-shadow: rgba(0, 0, 0, 0.5) 1px 3px 2px,
               rgba(0, 0, 0, 0.4) 8px 6px 0px;
             & h4 {

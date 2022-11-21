@@ -21,15 +21,24 @@ const Naavbar = (props) => {
         <Nav className='container'>
           <h3>Tuki</h3>
           <div className='link-container'>
-            <NavLink to='/' className='link' activeClassName='active'>
+            <NavLink
+              to='/'
+              className={({ isActive }) => (isActive ? 'active' : 'link')}
+            >
               Últimas noticias
             </NavLink>
-            <Link to='/contacto' className='link'>
+            <NavLink
+              to='/saracatunga'
+              className={({ isActive }) => (isActive ? 'active' : 'link')}
+            >
               afndsfjsd
-            </Link>
-            <Link to='/contacto' className='link'>
+            </NavLink>
+            <NavLink
+              to='/contacto'
+              className={({ isActive }) => (isActive ? 'active': 'link')}
+            >
               Nosotros
-            </Link>
+            </NavLink>
           </div>
           <div className='social-container'>
             {socialMedia.map(({ id, url, icon }) => {

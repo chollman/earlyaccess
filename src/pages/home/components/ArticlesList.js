@@ -12,12 +12,13 @@ const ArticlesList = ({ articles }) => {
   return (
     <Container className='articles-list'>
       <Row>
+        
         {articles.map(({ id, title, urlToImage, description }) => {
           return (
             <Col className='article-wrapper' key={id} xs={12} md={6} lg={4}>
               <Link className='link' to={`/articulo/${id}`}>
                 <div className='article'>
-                  <h4>{title}</h4>
+                  <h4>{title.length < 44 ? title : `${title.substring(0, 45)}...`}</h4>
                   <div className='image-container'>
                     <Image
                       className='article-image'
@@ -27,8 +28,7 @@ const ArticlesList = ({ articles }) => {
                     />
                   </div>
                   <p>
-                    {' '}
-                    {`${description.substring(0, 100)}...`}{' '}
+                    {`${description.substring(0, 85)}...`}{' '}
                     <span>Leer mas</span>
                   </p>
                 </div>
