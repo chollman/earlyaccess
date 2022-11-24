@@ -24,12 +24,12 @@
     & .link-container {
       display: flex;
       & .active {
-@include link-class();
+        @include link-class();
         transition: 0.2s;
         border-bottom: 3px solid $secondary-color;
       }
       & .link {
-@include link-class();
+        @include link-class();
         &:hover {
           color: $secondary-color;
           transition: 0.2s;

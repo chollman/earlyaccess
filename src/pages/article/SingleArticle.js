@@ -6,9 +6,8 @@ import { data } from '../../data'
 const SingleArticle = () => {
   const { articleId } = useParams()
   const article = data.articles.filter(({ id }) => {
-    return articleId == id
+    return Number(articleId) === id
   })[0]
-  console.log(article)
   if (!article) {
     return <div> No hay articulo </div>
   }
