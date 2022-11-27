@@ -1,15 +1,40 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { data } from '../../data'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { getAllArticlesThunk } from './articlesThunk';
 
 const initialState = {
-  data: data.articles,
-  amount: data.totalResults,
+  data: [],
+  amount: 0,
   isLoading: false,
   isError: false,
-}
+  numOfPages: 1,
+  totalArticles: 0,
+};
 
 const articlesSlice = createSlice({
   name: 'articles',
   initialState,
-})
-export default articlesSlice.reducer
+  extraReducers: (builder) => {
+    builder
+      .addCase(getAllArticles.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getAllArticles.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.amount = payload.articles.length;
+        state.data = payload.articles;
+        state.numOfPages = payload.numOfPages;
+        state.totalArticles = payload.totalArticles;
+      })
+      .addCase(getAllArticles.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        console.log(payload);
+      });
+  },
+});
+
+export const getAllArticles = createAsyncThunk(
+  'articles/getAllArticles',
+  getAllArticlesThunk
+);
+
+export default articlesSlice.reducer;
