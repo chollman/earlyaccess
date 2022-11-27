@@ -15,7 +15,7 @@ const Home = (props) => {
 
   useEffect(() => {
     dispatch(getAllArticles());
-  }, []);
+  }, [dispatch]);
 
   return (
     <section className='home'>
