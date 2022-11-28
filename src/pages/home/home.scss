@@ -1,9 +1,15 @@
 @import '../../styles/variables.scss';
 
 .#{$css-namespace} .home {
-  .article-list-wrapper {
+  .article-list-wrapper,
+  .is-loading {
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.7);
-    padding-top: 15px ;
+    padding-top: 15px;
+  }
+  .is-loading {
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
   }
 }
