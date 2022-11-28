@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 //import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
-import { data } from '../../data'
+import { getArticle } from '../../state/articles/articlesSlice'
 
 const SingleArticle = () => {
   const { articleId } = useParams()
-  const article = data.articles.filter(({ id }) => {
-    return Number(articleId) === id
-  })[0]
+  const dispatch = useDispatch()
+  const article = useSelector((store) => store.articles.currentArticle)
+  useEffect(() => {
+    dispatch(getArticle(articleId))
+  }, [dispatch, articleId])
+
   if (!article) {
     return <div> No hay articulo </div>
   }

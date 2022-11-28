@@ -11,3 +11,12 @@ export const getAllArticlesThunk = async () => {
     return error
   }
 }
+export const getArticleThunk = async (id) => {
+  let url = `${API_URL}/articles/${id}`
+  try {
+    const resp = await axios.get(url)
+    return resp.data
+  } catch (error) {
+    return error
+  }
+}

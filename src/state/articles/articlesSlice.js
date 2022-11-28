@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getAllArticlesThunk } from './articlesThunk'
+import { getAllArticlesThunk, getArticleThunk } from './articlesThunk'
 
 const initialState = {
   data: [],
@@ -8,6 +8,7 @@ const initialState = {
   isError: false,
   numOfPages: 1,
   totalArticles: 0,
+  currentArticle: null,
 }
 
 const articlesSlice = createSlice({
@@ -31,12 +32,28 @@ const articlesSlice = createSlice({
         state.isError = true
         console.log(payload)
       })
+      .addCase(getArticle.pending, (state) => {
+        state.isLoading = true
+      })
+      .addCase(getArticle.fulfilled, (state, { payload }) => {
+        state.isLoading = false
+        state.currentArticle = payload.article
+      })
+      .addCase(getArticle.rejected, (state, { payload }) => {
+        state.isLoading = false
+        state.isError = true
+        console.log(payload)
+      })
   },
 })
 
 export const getAllArticles = createAsyncThunk(
   'articles/getAllArticles',
   getAllArticlesThunk
+)
+export const getArticle = createAsyncThunk(
+  'articles/getArticle',
+  getArticleThunk
 )
 
 export default articlesSlice.reducer
