@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import SharedLayout from './components/shared-layout'
 
+import { SharedLayout } from './components'
 import { Home, Contact, SingleArticle, Error404 } from './pages'
 
 import './styles/app.scss'
