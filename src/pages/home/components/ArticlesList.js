@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
+import { Link } from 'react-router-dom'
 
-import './articles-list.scss';
+import './articles-list.scss'
 
 const ArticlesList = ({ articles }) => {
   return (
@@ -34,13 +34,13 @@ const ArticlesList = ({ articles }) => {
                 </div>
               </Link>
             </Col>
-          );
+          )
         })}
       </Row>
     </Container>
-  );
-};
+  )
+}
 
-ArticlesList.propTypes = { articles: PropTypes.array.isRequired };
+ArticlesList.propTypes = { articles: PropTypes.array.isRequired }
 
-export default ArticlesList;
+export default ArticlesList
