@@ -13,6 +13,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='contacto' element={<Contact />} />
           <Route path='/articulo/:articleId' element={<SingleArticle />} />
+          <Route path='*' element={<h1>Error 404</h1>} />
         </Route>
         <Route path='testing' element={<Home />} />
       </Routes>
