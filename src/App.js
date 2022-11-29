@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SharedLayout from './components/shared-layout'
-import SingleArticle from './pages/article'
-import Contact from './pages/contact'
-import Home from './pages/home'
+
+import { Home, Contact, SingleArticle } from './pages'
 
 import './styles/app.scss'
 
