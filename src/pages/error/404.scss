@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.#{$css-namespace} .error-404 {
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $font-color-dark;
+
+    h1 {
+        font-size: 5em;
+    }
+}
