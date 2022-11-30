@@ -10,5 +10,11 @@ body {
 }
 
 .#{$css-namespace} {
-  //CSS GENERAL
+  a {
+    text-decoration: none;
+    color: $link-color-dark;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
 }

@@ -1,10 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import SharedLayout from './components/shared-layout'
-import SingleArticle from './pages/article'
-import ComingSoon from './pages/coming-soon/ComingSoon'
-import Contact from './pages/contact'
-import Home from './pages/home'
-
+import { SharedLayout } from './components'
+import { Home, Contact, SingleArticle, Error404 } from './pages'
 import './styles/app.scss'
 
 function App() {
@@ -17,7 +13,7 @@ function App() {
           <Route path='proximamente' element={<ComingSoon />} />
           <Route path='/articulo/:articleId' element={<SingleArticle />} />
         </Route>
-        <Route path='testing' element={<Home />} />
+        <Route path='*' element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   )
