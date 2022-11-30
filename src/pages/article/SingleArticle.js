@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { getArticle } from '../../state/articles/articlesSlice'
 
+
 const SingleArticle = () => {
   const { articleId } = useParams()
   const dispatch = useDispatch()
@@ -13,11 +14,15 @@ const SingleArticle = () => {
   }, [dispatch, articleId])
 
   if (!article) {
-    return <div> No hay articulo </div>
+    return <div> Cargando... </div>
   }
   return (
     <div>
       <h2>{article.title}</h2>
+      <div>
+      <img src={article.image} alt={article.title}/>
+      </div>
+      
     </div>
   )
 }

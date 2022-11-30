@@ -6,35 +6,27 @@ import { NavLink } from 'react-router-dom'
 import { BsSearch } from 'react-icons/bs'
 import Nav from 'react-bootstrap/Nav'
 import { Navbar } from 'react-bootstrap'
+import { navbarLinks } from '../../utils/navbar-links'
 
 const Naavbar = () => {
   return (
     <Navbar collapseOnSelect expand='lg'>
       <Navbar.Toggle className='cambiame'>
-        <BsSearch />
       </Navbar.Toggle>
       <Navbar.Collapse>
         <Nav className='container'>
           <h3>Tuki</h3>
           <div className='link-container'>
-            <NavLink
-              to='/'
-              className={({ isActive }) => (isActive ? 'active' : 'link')}
-            >
-              Últimas noticias
-            </NavLink>
-            <NavLink
-              to='/saracatunga'
-              className={({ isActive }) => (isActive ? 'active' : 'link')}
-            >
-              afndsfjsd
-            </NavLink>
-            <NavLink
-              to='/contacto'
-              className={({ isActive }) => (isActive ? 'active' : 'link')}
-            >
-              Nosotros
-            </NavLink>
+            {navbarLinks.map(({ id, title, url }) => {
+              return (
+                <NavLink key={id}
+                  to={url}
+                  className={({ isActive }) => (isActive ? 'active' : 'link')}
+                >
+                  {title}
+                </NavLink>
+              )
+            })}
           </div>
           <div className='social-container'>
             {socialMedia.map(({ id, url, icon }) => {

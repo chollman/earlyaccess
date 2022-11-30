@@ -50,7 +50,7 @@ const Home = (props) => {
       <Container className='article-list-wrapper'>
         <Row>
           <Col>
-            <ImageSlider />
+            <ImageSlider articles={articles.data}/>
             <h3>Lista de Noticias</h3>
             <ArticlesList articles={articles.data} />
           </Col>
