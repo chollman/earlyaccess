@@ -1,7 +1,9 @@
+import { FaHome } from 'react-icons/fa'
+
 export const navbarLinks = [
   {
     id: 1,
-    title: 'Últimas noticias',
+    title: <FaHome />,
     url: '/',
   },
   {
