@@ -3,7 +3,7 @@ import axios from 'axios'
 const API_URL = 'https://earlyaccess-api.onrender.com/api/v1'
 
 export const getAllArticlesThunk = async () => {
-  let url = `${API_URL}/articles`
+  let url = `${API_URL}/articles?sort=-updatedAt`
   try {
     const resp = await axios.get(url)
     return resp.data
