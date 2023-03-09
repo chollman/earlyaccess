@@ -8,6 +8,7 @@ import { navbarLinks } from '../../utils/navbar-links'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Logo from '../../styles/images/logo.png'
 
 const Naavbar = () => {
   return (
@@ -15,10 +16,12 @@ const Naavbar = () => {
       <Row>
         <Col>
           <Navbar collapseOnSelect expand='lg'>
+            <Navbar.Brand href='#home'>
+              <img src={Logo} width='90' alt='Early Access Logo' />
+            </Navbar.Brand>
             <Navbar.Toggle className='cambiame'></Navbar.Toggle>
             <Navbar.Collapse>
               <Nav className='content'>
-                <h3>Tuki Logo</h3>
                 <div className='link-container'>
                   {navbarLinks.map(({ id, title, url }) => {
                     return (
